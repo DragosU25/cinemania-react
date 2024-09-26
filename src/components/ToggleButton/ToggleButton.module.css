@@ -1,0 +1,56 @@
+.toggleSwitch {
+  position: relative;
+  width: 60px;
+  height: 24px;
+}
+
+.toggleInput {
+  display: none;
+}
+
+.toggleLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #ffbb00, #ff7700);
+  border-radius: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.toggleLabel::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.toggleInput:checked + .toggleLabel::before {
+  transform: translateX(32px);
+}
+
+.toggleIcon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  color: #fff;
+}
+
+.moon {
+  left: 2px;
+}
+
+.sun {
+  right: 2px;
+}
